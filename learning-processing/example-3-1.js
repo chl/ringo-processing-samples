@@ -7,9 +7,9 @@ function setup() {
 }
 
 function draw() {
-    background(255);   
+    background(255);
     ellipseMode(CENTER);
-    rectMode(CENTER); 
+    rectMode(CENTER);
     // body
     stroke(0);
     fill(150);
@@ -17,10 +17,10 @@ function draw() {
     // head
     stroke(0);
     fill(255);
-    ellipse(100, 70, 60, 60);   
+    ellipse(100, 70, 60, 60);
     // eyes
-    fill(0); 
-    ellipse(81, 70, 16, 32); 
+    fill(0);
+    ellipse(81, 70, 16, 32);
     ellipse(119, 70, 16, 32);
     // legs
     stroke(0);

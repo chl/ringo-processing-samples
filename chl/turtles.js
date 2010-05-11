@@ -44,7 +44,7 @@ Turtle.prototype.forward = function(n) {
     var {x, y} = delta(this.heading, n);
     if (this.pen)
         this.sketch.line(
-            this.x, this.y, 
+            this.x, this.y,
             this.x + x, this.y + y
         );
     this.x += x;
@@ -65,10 +65,10 @@ Turtle.prototype.right = function(d) {
 
 // --
 
-if (require.main == module.id) { 
+if (require.main == module.id) {
     // for use w/ ringo -i
     require("ringo/processing").wire(this);
-    run();    
+    run();
     size(800, 600);
     background(255);
     smooth();
