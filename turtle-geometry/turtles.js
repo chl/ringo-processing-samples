@@ -1,4 +1,4 @@
-// chl, 2010-05-09
+// chl, 2010-05-09, 2010-05-13
 
 const DEGREES = Math.PI / 180;
 
@@ -18,8 +18,8 @@ function Turtle(sketch, x, y, heading) {
 
 Turtle.prototype.reset = function(x, y, heading) {
     if (x === undefined || x === null) {
-        this.x = this.sketch.width/2;
-        this.y = this.sketch.height/2;
+        this.x = this.sketch ? this.sketch.width/2 : 0;
+        this.y = this.sketch ? this.sketch.height/2 : 0;
     } else {
         this.x = x;
         this.y = y;
@@ -65,17 +65,26 @@ Turtle.prototype.right = function(d) {
 
 // --
 
-if (require.main == module.id) {
-    // for use w/ ringo -i
-    require("ringo/processing").wire(this);
-    run();
-    size(800, 600);
-    background(255);
-    smooth();
-    var turtle = new Turtle(sketch);
+function wire(object) {
+    require("ringo/processing").wire(object);
+    object.setup = function() {
+        object.size(800, 600);
+        object.background(255);
+        object.smooth();
+        object.turtle = new Turtle(object.sketch);
+    };
     for each (let x in Object.getOwnPropertyNames(Turtle.prototype))
         if (x != "constructor")
-            this[x] = (function(x) function() turtle[x].apply(turtle, arguments))(x);
+            object[x] = (function(x) function() object.turtle[x].apply(object.turtle, arguments))(x);
+}
+
+// --
+
+if (require.main == module.id) {
+    // for use w/ ringo -i
+    wire(this);
+    run();
 } else {
     exports.Turtle = Turtle;
+    exports.wire = wire;
 }
