@@ -1,8 +1,6 @@
-var {Sketch, RGB} = require("ringo/processing");
+var {Sketch, RGB} = require("ringo-processing");
 
-export("X");
-
-function X() {};
+var X = exports.X = function() {};
 
 X.prototype = new Sketch();
 

@@ -1,6 +1,6 @@
 // Based on: Processing: A Programming Handbook for Visual Designers and Artists, page 132
 
-require("ringo/processing").wire(this);
+require("ringo-processing").wire(this);
 
 var power = 3;
 var d = 8;

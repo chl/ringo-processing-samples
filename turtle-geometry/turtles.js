@@ -66,7 +66,7 @@ Turtle.prototype.right = function(d) {
 // --
 
 function wire(object) {
-    require("ringo/processing").wire(object);
+    require("ringo-processing").wire(object);
     object.setup = function() {
         object.size(800, 600);
         object.background(255);

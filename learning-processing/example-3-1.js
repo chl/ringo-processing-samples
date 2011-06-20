@@ -1,6 +1,6 @@
 // http://www.learningprocessing.com/examples/chapter-3/example-3-1/
 
-require("ringo/processing").wire(this);
+require("ringo-processing").wire(this);
 
 function setup() {
     size(200, 200);

@@ -1,6 +1,6 @@
 // http://www.learningprocessing.com/examples/chapter-9/example-9-8/
 
-require("ringo/processing").wire(this);
+require("ringo-processing").wire(this);
 
 var N = 50;
 

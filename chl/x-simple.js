@@ -1,4 +1,4 @@
-require("ringo/processing").wire(this);
+require("ringo-processing").wire(this);
 
 function setup() {
     size(400, 400);

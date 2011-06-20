@@ -1,13 +1,14 @@
 // http://www.learningprocessing.com/examples/chapter-9/example-9-8/
 
-require("ringo/processing").wire(this);
+require("ringo-processing").wire(this);
 
 var N = 50;
 
 var P = [];
 
 function setup() {
-    size(200, 200);
+    use("opengl");
+    size(200, 200, OPENGL);
     smooth();
     while (P.length < N)
         P.push([0, 0]);

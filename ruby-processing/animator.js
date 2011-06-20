@@ -1,7 +1,7 @@
 // Ported from the ruby-processing version at:
 // http://github.com/jashkenas/ruby-processing/blob/master/samples/contributed/animator.rb
 
-require("ringo/processing").wire(this);
+require("ringo-processing").wire(this);
 
 var FRAMES = 12;
 var DELAY = 50;

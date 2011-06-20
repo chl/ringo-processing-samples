@@ -1,6 +1,6 @@
 // http://www.learningprocessing.com/examples/chapter-13/example-noise-graph/
 
-require("ringo/processing").wire(this);
+require("ringo-processing").wire(this);
 
 var t = 0;
 var step = 0.01;

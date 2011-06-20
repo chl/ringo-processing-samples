@@ -1,6 +1,6 @@
 // http://www.learningprocessing.com/examples/chapter-5/example-5-6/
 
-require("ringo/processing").wire(this);
+require("ringo-processing").wire(this);
 
 var [x, speed] = [0, 1];
 
